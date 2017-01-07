@@ -28,12 +28,6 @@ func Run(r io.Reader) []string {
 	return results
 }
 
-type inputCase1 struct {
-	p int
-	x int
-	y int
-}
-
 func parseInput(r io.Reader) []inputCase1 {
 	var amount int
 	fmt.Fscanln(r, &amount)
@@ -52,6 +46,12 @@ const (
 	size   = 100
 	center = size / 2
 )
+
+type inputCase1 struct {
+	p int
+	x int
+	y int
+}
 
 // TODO punt central
 func (c inputCase1) coloured() bool {
