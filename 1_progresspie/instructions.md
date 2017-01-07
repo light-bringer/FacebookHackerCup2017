@@ -1,4 +1,4 @@
-# Progress Pie - 25 points
+# Progress Pie (25 points)
 
 Some progress bars fill you with anticipation. Some are finished before you know it and make you wonder why there was a progress bar at all.
 
