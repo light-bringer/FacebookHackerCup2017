@@ -53,7 +53,6 @@ type inputCase struct {
 	y int
 }
 
-// TODO punt central
 func (c inputCase) coloured() bool {
 	if c.x == center && c.y == center {
 		return c.p > 0
