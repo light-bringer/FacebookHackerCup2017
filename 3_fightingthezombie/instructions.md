@@ -1,4 +1,4 @@
-# Fighting the Zombie
+# Fighting the Zombie (45 points)
 
 **"Okay, Wizard, cast your spell!"**
 
