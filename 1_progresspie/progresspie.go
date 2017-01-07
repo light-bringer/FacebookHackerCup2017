@@ -93,8 +93,8 @@ func (c inputCase) angle() int {
 	return angle
 }
 
-func distanceFromCenter(x, y int) int {
+func distanceFromCenter(x, y int) float64 {
 	a := float64(center - x)
 	b := float64(center - y)
-	return int(math.Sqrt(a*a + b*b))
+	return math.Sqrt(a*a + b*b)
 }

@@ -7,7 +7,7 @@ Case #6: black
 Case #7: white
 Case #8: black
 Case #9: white
-Case #10: black
+Case #10: white
 Case #11: white
 Case #12: black
 Case #13: white
@@ -81,7 +81,7 @@ Case #80: white
 Case #81: white
 Case #82: white
 Case #83: white
-Case #84: black
+Case #84: white
 Case #85: black
 Case #86: white
 Case #87: white
@@ -198,7 +198,7 @@ Case #197: white
 Case #198: black
 Case #199: white
 Case #200: black
-Case #201: black
+Case #201: white
 Case #202: black
 Case #203: black
 Case #204: black
@@ -243,7 +243,7 @@ Case #242: black
 Case #243: white
 Case #244: black
 Case #245: black
-Case #246: black
+Case #246: white
 Case #247: white
 Case #248: white
 Case #249: white
@@ -416,7 +416,7 @@ Case #415: white
 Case #416: white
 Case #417: black
 Case #418: white
-Case #419: black
+Case #419: white
 Case #420: black
 Case #421: black
 Case #422: black
@@ -559,7 +559,7 @@ Case #558: black
 Case #559: white
 Case #560: black
 Case #561: white
-Case #562: black
+Case #562: white
 Case #563: white
 Case #564: black
 Case #565: white
@@ -630,7 +630,7 @@ Case #629: white
 Case #630: black
 Case #631: white
 Case #632: white
-Case #633: black
+Case #633: white
 Case #634: white
 Case #635: black
 Case #636: black
@@ -639,7 +639,7 @@ Case #638: white
 Case #639: black
 Case #640: white
 Case #641: white
-Case #642: black
+Case #642: white
 Case #643: black
 Case #644: white
 Case #645: white
@@ -717,7 +717,7 @@ Case #716: white
 Case #717: white
 Case #718: white
 Case #719: white
-Case #720: black
+Case #720: white
 Case #721: white
 Case #722: black
 Case #723: black
@@ -749,7 +749,7 @@ Case #748: white
 Case #749: white
 Case #750: white
 Case #751: white
-Case #752: black
+Case #752: white
 Case #753: white
 Case #754: black
 Case #755: black
@@ -773,7 +773,7 @@ Case #772: white
 Case #773: white
 Case #774: white
 Case #775: white
-Case #776: black
+Case #776: white
 Case #777: white
 Case #778: white
 Case #779: white
@@ -788,7 +788,7 @@ Case #787: black
 Case #788: black
 Case #789: white
 Case #790: black
-Case #791: black
+Case #791: white
 Case #792: black
 Case #793: white
 Case #794: black
@@ -839,7 +839,7 @@ Case #838: white
 Case #839: white
 Case #840: black
 Case #841: white
-Case #842: black
+Case #842: white
 Case #843: black
 Case #844: black
 Case #845: white
@@ -896,7 +896,7 @@ Case #895: white
 Case #896: white
 Case #897: black
 Case #898: white
-Case #899: black
+Case #899: white
 Case #900: black
 Case #901: white
 Case #902: black
