@@ -7,12 +7,6 @@ import (
 	"os"
 )
 
-type inputCase struct {
-	p int
-	x int
-	y int
-}
-
 func main() {
 	results := Run(os.Stdin)
 	for _, r := range results {
@@ -34,13 +28,19 @@ func Run(r io.Reader) []string {
 	return results
 }
 
-func parseInput(r io.Reader) []inputCase {
+type inputCase1 struct {
+	p int
+	x int
+	y int
+}
+
+func parseInput(r io.Reader) []inputCase1 {
 	var amount int
 	fmt.Fscanln(r, &amount)
 
-	cases := []inputCase{}
+	cases := []inputCase1{}
 	for i := 0; i < amount; i++ {
-		c := inputCase{}
+		c := inputCase1{}
 		fmt.Fscanln(r, &c.p, &c.x, &c.y)
 		cases = append(cases, c)
 	}
@@ -54,7 +54,7 @@ const (
 )
 
 // TODO punt central
-func (c inputCase) coloured() bool {
+func (c inputCase1) coloured() bool {
 	if c.x == center && c.y == center {
 		return c.p > 0
 	}
@@ -72,7 +72,7 @@ func (c inputCase) coloured() bool {
 	return true
 }
 
-func (c inputCase) angle() int {
+func (c inputCase1) angle() int {
 	x := float64(c.x - center)
 	y := float64(c.y - center)
 	dist := math.Sqrt(x*x + y*y)
