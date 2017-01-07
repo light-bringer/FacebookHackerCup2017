@@ -9,7 +9,7 @@ import (
 )
 
 func TestFightingTheZombie(t *testing.T) {
-	input := `5
+	input := `6
 2 2
 2d4 1d8
 10 2
@@ -19,7 +19,9 @@ func TestFightingTheZombie(t *testing.T) {
 40 3
 10d4 5d8 2d20
 10 4
-1d10 1d10+1 1d10+2 1d10+3`
+1d10 1d10+1 1d10+2 1d10+3
+10000 10
+20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000 20d20-10000`
 
 	results := zombie.Run(strings.NewReader(input))
 
@@ -29,6 +31,7 @@ func TestFightingTheZombie(t *testing.T) {
 		"Case #3: 0.250000",
 		"Case #4: 0.002500",
 		"Case #5: 0.400000",
+		"Case #6: 0.000000",
 	}
 
 	if len(results) != len(expectations) {
