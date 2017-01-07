@@ -1,7 +1,6 @@
 package main_test
 
 import (
-	"fmt"
 	"strings"
 	"testing"
 
@@ -37,8 +36,6 @@ func TestProgressPie(t *testing.T) {
 	for i, r := range results {
 		if r != expectations[i] {
 			t.Errorf("\"%s\" does not match expectation \"%s\"", r, expectations[i])
-		} else {
-			fmt.Println("PASSED")
 		}
 	}
 }
