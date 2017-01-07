@@ -83,7 +83,7 @@ func (c *InputCase) shift() int {
 
 func (c *InputCase) pop() int {
 	var w int
-	w, *c = (*c)[len(*c) - 1], (*c)[:len(*c) - 1]
+	w, *c = (*c)[len(*c)-1], (*c)[:len(*c)-1]
 	return w
 }
 
