@@ -51,6 +51,12 @@ func parseInput(r io.Reader) []inputCase {
 	return cases
 }
 
+type DiceRoll struct {
+	Dice   int
+	Faces  int
+	Offset int
+}
+
 type inputCase struct {
 	hp    int
 	rolls []DiceRoll
@@ -59,7 +65,8 @@ type inputCase struct {
 func (c inputCase) maxProbabilityOfKill() float64 {
 	var probability float64
 	for _, roll := range c.rolls {
-		rp := roll.ProbabilityOfKill(c.hp - roll.Offset)
+		m := NewMatrix(roll.Faces)
+		rp := m.Prob(roll.Dice, c.hp-roll.Offset)
 		if rp > probability {
 			probability = rp
 		}
@@ -67,25 +74,42 @@ func (c inputCase) maxProbabilityOfKill() float64 {
 	return probability
 }
 
-type DiceRoll struct {
-	Dice   int
-	Faces  int
-	Offset int
+type Matrix struct {
+	Faces int
+	M     map[int]map[int]float64
 }
 
-func (d DiceRoll) ProbabilityOfKill(zombieHP int) float64 {
-	if zombieHP <= 0 {
+func NewMatrix(faces int) Matrix {
+	return Matrix{
+		Faces: faces,
+		M:     make(map[int]map[int]float64),
+	}
+}
+
+func (m *Matrix) Prob(dice, hp int) float64 {
+	p, ok := m.M[dice][hp]
+	if !ok {
+		p = m.calc(dice, hp)
+		if _, ok := m.M[dice]; !ok {
+			m.M[dice] = make(map[int]float64)
+		}
+		m.M[dice][hp] = p
+	}
+
+	return p
+}
+
+func (m *Matrix) calc(dice, hp int) float64 {
+	if hp <= 0 {
 		return 1
-	} else if d.Dice < 1 {
+	} else if dice < 1 {
 		return 0
 	}
 
 	var probability float64
-
-	d.Dice--
-	factor := 1 / float64(d.Faces)
-	for damage := 1; damage <= d.Faces; damage++ {
-		probability += d.ProbabilityOfKill(zombieHP - damage) * factor
+	factor := 1 / float64(m.Faces)
+	for damage := 1; damage <= m.Faces; damage++ {
+		probability += m.Prob(dice-1, hp-damage) * factor
 	}
 
 	return probability
