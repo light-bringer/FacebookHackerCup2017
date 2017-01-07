@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	progressPie "github.com/rogerclotet/FacebookHackerCup2017/1_progresspie"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestProgressPie(t *testing.T) {
@@ -34,8 +35,6 @@ func TestProgressPie(t *testing.T) {
 	}
 
 	for i, r := range results {
-		if r != expectations[i] {
-			t.Errorf("\"%s\" does not match expectation \"%s\"", r, expectations[i])
-		}
+		assert.Equal(t, expectations[i], r)
 	}
 }
