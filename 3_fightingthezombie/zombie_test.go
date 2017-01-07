@@ -34,9 +34,7 @@ func TestFightingTheZombie(t *testing.T) {
 		"Case #6: 0.000000",
 	}
 
-	if len(results) != len(expectations) {
-		t.Errorf("invalid results amount: %d", len(results))
-	}
+	assert.Len(t, results, len(expectations))
 
 	for i, r := range results {
 		assert.Equal(t, expectations[i], r)
