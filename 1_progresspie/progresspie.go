@@ -64,11 +64,8 @@ func (c inputCase) coloured() bool {
 
 	angle := c.angle()
 	filledAngle := 360 * c.p / 100
-	if angle > filledAngle {
-		return false
-	}
 
-	return true
+	return angle <= filledAngle
 }
 
 func (c inputCase) angle() int {
